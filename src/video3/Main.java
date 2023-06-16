@@ -29,36 +29,29 @@ public class Main {
             System.out.print("Moi nhap chuc nang:");
             chucNang = Integer.valueOf(sc.nextLine());
             switch (chucNang) {
-                case 1: {
+                case 1 ->  {
                     service.nhapCongViec(listCongViec);
-                    break;
                 }
-                case 2: {
+                case 2 ->  {
                     service.xemCongViecChuaThucHien(listCongViec);
-                    break;
                 }
-                case 3: {
+                case 3 ->  {
                     service.xemCongViecGanDeadline(listCongViec);
-                    break;
                 }
-                case 4: {
+                case 4 ->  {
                     System.out.print("Nhap vi tri muon xoa:");
                     int index = Integer.valueOf(sc.nextLine());
                     service.xoaCongViec(listCongViec, index);
-                    break;
                 }
-                case 5: {
+                case 5 ->  {
                     System.out.print("Nhap vi tri muon update:");
                     int index = Integer.valueOf(sc.nextLine());
                     service.capNhapCongViec(listCongViec, index);
-                    break;
                 }
-                case 0: {
-                    break;
+                case 0 ->  {
                 }
-                default: {
+                default ->  {
                     System.out.println("Chuc nang khong ton tai");
-                    break;
                 }
             }
         } while (chucNang != 0);
